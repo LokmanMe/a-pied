@@ -91,7 +91,8 @@
           "gouter": "⛵ Goûter navettes"
         }
       },
-      "trajetBus": "🚇 métro/bus RTM"
+      "trajetBus": "🚇 métro/bus RTM",
+      "cache": true
     },
     {
       "id": "santa-cruz",
@@ -125,7 +126,8 @@
           "gouter": "☕ Barraquito"
         }
       },
-      "trajetBus": "🚋 tram/guagua"
+      "trajetBus": "🚋 tram/guagua",
+      "cache": true
     }
   ]
 }

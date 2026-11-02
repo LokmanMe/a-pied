@@ -3,6 +3,7 @@
 
 // ---------- Constantes ----------
 const CITY_KEY = 'apied.ville';
+const SHOW_ALL_KEY = 'apied.toutesVilles';   // villes « cache » affichées (7 appuis rapides sur 📍)
 const LEGACY_PREFIX = { metz: 'metz', luxembourg: 'lux' };   // clés des anciennes apps séparées (même origine)
 const DETOUR = 1.3;                 // facteur de détour piéton vs vol d'oiseau
 const FAR_KM = 4.5;                 // à pied seulement : lieux au-delà (≈ 1 h de marche depuis le départ) écartés
@@ -833,7 +834,7 @@ function openSheet(index) {
 // ---------- Événements ----------
 function bindEvents() {
   $('#btn-edit').addEventListener('click', showQuiz);
-  $('#btn-city').addEventListener('click', showCities);
+  $('#btn-city').addEventListener('click', onCityButton);
   $('#city-list').addEventListener('click', (e) => {
     const b = e.target.closest('[data-city]');
     if (!b) return;
@@ -957,8 +958,26 @@ function chooseCity(id) {
   location.href = location.pathname;
 }
 
+/** Villes proposées : celles marquées « cache » dans villes.json n'apparaissent qu'une fois débloquées. */
+const shownCities = () => CITIES.filter((c) => !c.cache || load(SHOW_ALL_KEY, false));
+
+/** 7 appuis rapides sur 📍 affichent ou masquent à nouveau les villes cachées. */
+let secretTaps = 0, secretTimer;
+function onCityButton() {
+  showCities();
+  clearTimeout(secretTimer);
+  secretTimer = setTimeout(() => { secretTaps = 0; }, 1500);
+  if (++secretTaps < 7) return;
+  secretTaps = 0;
+  const all = !load(SHOW_ALL_KEY, false);
+  save(SHOW_ALL_KEY, all);
+  showCities();
+  const names = CITIES.filter((c) => c.cache).map((c) => c.nom).join(' et ');
+  toast(all ? `🔓 ${names} : villes affichées.` : `🔒 ${names} : villes de nouveau masquées.`);
+}
+
 function showCities() {
-  $('#city-list').innerHTML = CITIES.map((c) => `<li><button type="button" class="city-card" data-city="${esc(c.id)}" aria-current="${c.id === CITY?.id}">
+  $('#city-list').innerHTML = shownCities().map((c) => `<li><button type="button" class="city-card" data-city="${esc(c.id)}" aria-current="${c.id === CITY?.id}">
       <img src="${esc(c.image)}" alt="" loading="lazy" decoding="async">
       <span class="city-text"><strong>${esc(c.nom)}</strong><small>${esc(c.pays)} · ${esc(c.resume)}</small></span>
     </button></li>`).join('');
@@ -1002,9 +1021,10 @@ async function main() {
 
   // Ville : ?ville=… dans l'adresse (lien partagé), sinon la dernière choisie, sinon on demande.
   const asked = new URLSearchParams(location.search).get('ville');
-  const id = [asked, load(CITY_KEY, null)].find((x) => CITIES.some((c) => c.id === x));
+  const id = [asked, load(CITY_KEY, null)].find((x) => shownCities().some((c) => c.id === x));
   if (!id) {
     $('.brand em').textContent = 'À pied';
+    $('#btn-city').hidden = false;
     showCities();
     return;
   }

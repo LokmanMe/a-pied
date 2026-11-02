@@ -1,6 +1,6 @@
 # À pied
 
-PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz**, **Luxembourg**, **Marseille** et **Santa Cruz de Tenerife**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
+PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. L'app se concentre sur la région Moselle / Luxembourg : **Metz** et **Luxembourg** sont proposées à tous. **Marseille** et **Santa Cruz de Tenerife** sont masquées : 7 appuis rapides sur le bouton 📍 les affichent sur ce téléphone, 7 autres les masquent à nouveau. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
 
 En ligne : <https://lokmanme.github.io/a-pied/> (dépôt `LokmanMe/a-pied`, anciennement `metz-a-pied`).
 
@@ -79,7 +79,7 @@ git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v11`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v12`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -128,9 +128,12 @@ Pour supprimer la barre d'adresse dans l'APK, publier aussi le fichier `assetlin
     "transport": { "bus": "🚶+🚋 Pied + tram" },
     "pauses": { "gouter": "🟡 Goûter macarons" }
   },
-  "trajetBus": "🚋 tram"
+  "trajetBus": "🚋 tram",
+  "cache": false
 }
 ```
+
+`"cache": true` masque la ville du choix de ville (et des liens `?ville=`) tant qu'elle n'a pas été débloquée par 7 appuis rapides sur 📍 ; ses données restent mises en cache pour fonctionner hors ligne une fois débloquée.
 
 5. Facultatif : un thème de couleurs dans `style.css` avec `:root[data-ville="<id>"] { --stone: …; --c-blue: …; --route: …; … }` (sinon la ville prend le thème de Metz).
 6. Incrémenter `VERSION` dans `service-worker.js`. Toutes les villes du catalogue sont précachées à l'installation (environ 3 Mo par ville) ; au-delà d'une dizaine de villes, il vaudrait mieux ne mettre en cache que la ville choisie.
