@@ -1,0 +1,1176 @@
+{
+  "version": 1,
+  "verification": "Coordonnées vérifiées via OpenStreetMap/Nominatim le 2026-11-05. Horaires, tarifs et adresses de pauses à confirmer sur place.",
+  "departs": {
+    "gare": {
+      "nom": "Gare Lille-Flandres",
+      "lat": 50.6365,
+      "lng": 3.0703,
+      "id": "depart-gare"
+    },
+    "parkings": [
+      {
+        "id": "p-nouveau-siecle",
+        "nom": "Parking Nouveau Siècle",
+        "lat": 50.63711,
+        "lng": 3.0596
+      },
+      {
+        "id": "p-euralille",
+        "nom": "Parking Euralille",
+        "lat": 50.63647,
+        "lng": 3.07588
+      },
+      {
+        "id": "p-champ-de-mars",
+        "nom": "Parking du Champ de Mars (près de la Citadelle)",
+        "lat": 50.63703,
+        "lng": 3.05117
+      }
+    ]
+  },
+  "lieux": [
+    {
+      "id": "grand-place",
+      "nom": "Grand'Place",
+      "lat": 50.63689,
+      "lng": 3.06474,
+      "categories": [
+        "histoire",
+        "architecture",
+        "photo",
+        "nuit"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 3,
+      "description": "Le cœur de Lille, officiellement place du Général-de-Gaulle. Façades flamandes, terrasses, la Vieille Bourse et le Théâtre du Nord l'encadrent, avec la colonne de la Déesse au centre.",
+      "aRegarder": "La colonne de la Déesse, les façades à pignons, la Grand'Garde (Théâtre du Nord) et la grande librairie du Furet du Nord.",
+      "anecdote": "La colonne de la Déesse rappelle la résistance de la ville au siège autrichien de 1792 : la statue tient une mèche de canon allumée.",
+      "photo": "Depuis le pied de la colonne, cadrez la Déesse avec la Vieille Bourse et le beffroi de la Chambre de commerce derrière.",
+      "image": "villes/lille/images/grand-place.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_vue_gd_place.JPG"
+    },
+    {
+      "id": "vieille-bourse",
+      "nom": "Vieille Bourse",
+      "lat": 50.63705,
+      "lng": 3.06402,
+      "categories": [
+        "architecture",
+        "histoire",
+        "shopping",
+        "photo"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 3,
+      "description": "Joyau de la Renaissance flamande, bâti en 1652-1653 : vingt-quatre maisons identiques autour d'une cour à arcades, construites pour les marchands de la ville.",
+      "aRegarder": "Les cariatides et guirlandes sculptées des façades, et, dans la cour, les bouquinistes et les joueurs d'échecs.",
+      "anecdote": "Chaque après-midi ou presque, les bouquinistes s'installent sous les arcades ; l'été, on y danse le tango certains soirs.",
+      "photo": "La cour intérieure en enfilade, avec le beffroi de la Chambre de commerce qui dépasse des toits.",
+      "note": "Bouquinistes l'après-midi, du mardi au dimanche (à confirmer).",
+      "image": "villes/lille/images/vieille-bourse.jpg",
+      "imageCredit": "PIERRE ANDRE LECLERCQ · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille,_la_Vieille_Bourse_(PA00107639).jpg"
+    },
+    {
+      "id": "beffroi",
+      "nom": "Beffroi de l'hôtel de ville",
+      "lat": 50.63062,
+      "lng": 3.06981,
+      "categories": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "duree": 45,
+      "payant": true,
+      "importance": 3,
+      "description": "Haut de 104 m, il est présenté comme le plus haut beffroi civil d'Europe. Construit entre 1924 et 1932 en béton et brique, il est inscrit au patrimoine mondial de l'UNESCO avec les beffrois de France et de Belgique.",
+      "aRegarder": "À sa base, les statues des géants Lydéric et Phinaert, héros de la légende de la fondation de Lille. Au sommet, la vue sur toute la métropole et, par temps clair, jusqu'à la Belgique.",
+      "anecdote": "Selon la légende, Lydéric aurait vaincu le géant Phinaert pour venger ses parents, et fondé Lille sur ses terres.",
+      "photo": "Depuis le sommet, la ville en briques rouges à perte de vue.",
+      "note": "Montée payante, avec une partie des marches puis un ascenseur ; horaires et réservation à confirmer.",
+      "image": "villes/lille/images/beffroi.jpg",
+      "imageCredit": "Gzen92 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_ville_-_beffroi_(Lille).jpg"
+    },
+    {
+      "id": "place-theatre",
+      "nom": "Place du Théâtre et Opéra",
+      "lat": 50.63772,
+      "lng": 3.06532,
+      "categories": [
+        "architecture",
+        "art",
+        "nuit",
+        "photo"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 3,
+      "description": "Prolongeant la Grand'Place, la place réunit l'Opéra néoclassique, la Nouvelle Bourse et son beffroi, et le Rang du Beauregard, une rangée de maisons de 1687.",
+      "aRegarder": "La façade de l'Opéra et son fronton sculpté, le beffroi de la Chambre de commerce, et les façades en brique et pierre du Rang du Beauregard.",
+      "anecdote": "L'Opéra, achevé en 1914, a été occupé par les Allemands pendant la Première Guerre mondiale avant même son inauguration officielle, en 1923.",
+      "photo": "À la tombée de la nuit, l'Opéra et le beffroi s'illuminent : cadrez-les ensemble depuis la rue de la Bourse.",
+      "note": "Spectacles payants, programme à consulter.",
+      "image": "villes/lille/images/place-theatre.jpg",
+      "imageCredit": "0x010C · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:2017-04_Op%C3%A9ra_de_Lille.jpg"
+    },
+    {
+      "id": "palais-beaux-arts",
+      "nom": "Palais des Beaux-Arts",
+      "lat": 50.63046,
+      "lng": 3.06281,
+      "categories": [
+        "art",
+        "architecture"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 3,
+      "description": "L'un des plus grands musées de France, installé dans un palais de la fin du XIXe siècle face à la place de la République. Peintures de Rubens, Goya, Delacroix, sculptures et céramiques.",
+      "aRegarder": "Les deux tableaux de Goya, les grands Rubens et, au sous-sol, les plans-reliefs : des maquettes géantes de villes fortifiées du XVIIIe siècle.",
+      "anecdote": "Les plans-reliefs servaient aux rois de France à préparer la défense des places fortes ; celui de Lille montre la ville à l'époque de Vauban.",
+      "photo": "L'atrium et ses grands volumes de lumière.",
+      "note": "Fermé le mardi (à confirmer) ; entrée payante, gratuite certains dimanches.",
+      "image": "villes/lille/images/palais-beaux-arts.jpg",
+      "imageCredit": "PBA Lille · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_du_Palais_des_Beaux-Arts_de_Lille.jpg"
+    },
+    {
+      "id": "notre-dame-treille",
+      "nom": "Cathédrale Notre-Dame-de-la-Treille",
+      "lat": 50.64018,
+      "lng": 3.06281,
+      "categories": [
+        "religieux",
+        "architecture",
+        "art"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 3,
+      "description": "Une cathédrale commencée en 1854 dans le style néogothique et terminée en 1999 par une façade résolument contemporaine. Il aura fallu près d'un siècle et demi pour l'achever.",
+      "aRegarder": "De l'intérieur, la façade : une paroi de fines plaques de marbre, traversée par la lumière, et la grande rose du peintre Ladislas Kijno.",
+      "anecdote": "Le marbre de la façade ne fait que 28 mm d'épaisseur : en journée, il laisse filtrer une lumière orangée dans la nef.",
+      "photo": "Placez-vous dans la nef, dos à l'autel, quand le soleil frappe la façade.",
+      "image": "villes/lille/images/notre-dame-treille.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_ND_treille_ouest.JPG"
+    },
+    {
+      "id": "vieux-lille",
+      "nom": "Rue de la Monnaie (Vieux-Lille)",
+      "lat": 50.64162,
+      "lng": 3.06185,
+      "categories": [
+        "histoire",
+        "shopping",
+        "photo",
+        "gastronomie"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 3,
+      "description": "La rue la plus pittoresque du Vieux-Lille : pavés, façades en brique et pierre des XVIIe et XVIIIe siècles, boutiques et chocolatiers.",
+      "aRegarder": "Les cartouches sculptés au-dessus des portes, qui indiquaient autrefois le métier ou le nom de la maison, et les petites cours cachées.",
+      "anecdote": "La rue doit son nom à l'atelier où l'on frappait la monnaie de la ville au Moyen Âge.",
+      "photo": "En enfilade depuis le bas de la rue, les façades colorées qui se succèdent.",
+      "image": "villes/lille/images/vieux-lille.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_rue_de_la_monnaie.jpg"
+    },
+    {
+      "id": "hospice-comtesse",
+      "nom": "Musée de l'Hospice Comtesse",
+      "lat": 50.64117,
+      "lng": 3.06321,
+      "categories": [
+        "histoire",
+        "art"
+      ],
+      "duree": 50,
+      "payant": true,
+      "importance": 2,
+      "description": "Hôpital fondé en 1237 par Jeanne, comtesse de Flandre, devenu un musée. On y découvre la vie d'une communauté religieuse et d'une maison flamande d'autrefois.",
+      "aRegarder": "La grande salle des malades et sa voûte en bois en forme de coque de navire renversée, la cuisine aux carreaux de faïence.",
+      "anecdote": "Les religieuses y ont soigné les malades pendant plus de cinq siècles, jusqu'à la Révolution.",
+      "photo": "Le jardin intérieur avec les façades en brique.",
+      "note": "Entrée payante ; fermé le mardi (à confirmer).",
+      "image": "villes/lille/images/hospice-comtesse.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_Hospice_comtesse_entr%C3%A9e.jpg"
+    },
+    {
+      "id": "citadelle",
+      "nom": "Citadelle de Lille",
+      "lat": 50.64136,
+      "lng": 3.04439,
+      "categories": [
+        "histoire",
+        "nature",
+        "photo"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "Surnommée « la reine des citadelles », elle a été construite par Vauban à partir de 1667, juste après la prise de Lille par Louis XIV. Elle a la forme d'une étoile à cinq branches.",
+      "aRegarder": "Les remparts en brique, les douves et la porte Royale ; le tour extérieur, dans les bois, est une belle promenade.",
+      "anecdote": "Elle est toujours occupée par l'armée : on ne visite l'intérieur qu'avec une visite guidée de l'office de tourisme.",
+      "photo": "La porte Royale reflétée dans les douves.",
+      "note": "Intérieur accessible seulement en visite guidée, sur réservation.",
+      "image": "villes/lille/images/citadelle.jpg",
+      "imageCredit": "Jiel Beaumadier (http://jiel.b.free.fr) · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Jielbeaumadier_citadelle_lille_2006.jpg"
+    },
+    {
+      "id": "bois-boulogne",
+      "nom": "Bois de Boulogne et Deûle",
+      "lat": 50.63787,
+      "lng": 3.04261,
+      "categories": [
+        "nature",
+        "sport"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "Le grand poumon vert de Lille, autour de la Citadelle, le long des canaux de la Deûle. Les Lillois y courent, y pique-niquent et s'y promènent en famille.",
+      "aRegarder": "Les allées le long de l'eau, les grands arbres et les joggeurs du dimanche.",
+      "anecdote": "Le tour de la Citadelle fait environ 3 km : c'est le circuit de footing préféré des Lillois.",
+      "photo": "Les reflets des arbres dans les canaux au petit matin.",
+      "image": "villes/lille/images/bois-boulogne.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_deule_esplanade.jpg"
+    },
+    {
+      "id": "zoo",
+      "nom": "Zoo de Lille",
+      "lat": 50.63794,
+      "lng": 3.04611,
+      "categories": [
+        "nature"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 2,
+      "description": "Un petit zoo au cœur du bois de la Citadelle : rhinocéros, zèbres, primates, tigres et oiseaux, sur un parcours facile pour les enfants.",
+      "aRegarder": "Les singes, les rhinocéros blancs et la grande serre.",
+      "anecdote": "Le zoo a longtemps été entièrement gratuit, ce qui en faisait une sortie très populaire chez les familles lilloises.",
+      "photo": "Les animaux à travers les vitres ou derrière les douves, sans grillage.",
+      "note": "Petit tarif d'entrée ; horaires selon la saison, à confirmer.",
+      "image": "villes/lille/images/zoo.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_zoo_entree.JPG"
+    },
+    {
+      "id": "jardin-vauban",
+      "nom": "Jardin Vauban",
+      "lat": 50.63676,
+      "lng": 3.04949,
+      "categories": [
+        "nature",
+        "photo"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 2,
+      "description": "Un jardin romantique à l'anglaise, dessiné en 1865, avec pelouses vallonnées, cascade, rocaille et grands arbres, face au bois de la Citadelle.",
+      "aRegarder": "Le petit pont sur l'étang, la cascade et le kiosque du théâtre de marionnettes.",
+      "anecdote": "On y joue encore des spectacles de marionnettes avec Jacques, le Guignol lillois, qui parle le patois du Nord.",
+      "photo": "L'étang et ses reflets, avec un banc sous les saules.",
+      "image": "villes/lille/images/jardin-vauban.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_jardin_vauban.jpg"
+    },
+    {
+      "id": "maison-de-gaulle",
+      "nom": "Maison natale de Charles de Gaulle",
+      "lat": 50.64584,
+      "lng": 3.05867,
+      "categories": [
+        "histoire"
+      ],
+      "duree": 50,
+      "payant": true,
+      "importance": 2,
+      "description": "La maison de ses grands-parents, où Charles de Gaulle est né le 22 novembre 1890, aujourd'hui transformée en musée. Un parcours sur son enfance et sa famille.",
+      "aRegarder": "La chambre natale, le berceau, et les objets de la famille de Gaulle.",
+      "anecdote": "Charles de Gaulle a été baptisé dans l'église Saint-André toute proche, quelques jours après sa naissance.",
+      "photo": "La façade de la rue Princesse et sa plaque.",
+      "note": "Entrée payante ; horaires à confirmer.",
+      "image": "villes/lille/images/maison-de-gaulle.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_maison_de_gaulle_rue_princesse.jpg"
+    },
+    {
+      "id": "saint-maurice",
+      "nom": "Église Saint-Maurice",
+      "lat": 50.63588,
+      "lng": 3.0675,
+      "categories": [
+        "religieux",
+        "architecture"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Église gothique typique de la Flandre, à deux pas de la gare Lille-Flandres. C'est une « hallekerque », une église-halle aux nefs de même hauteur.",
+      "aRegarder": "Les cinq nefs parallèles qui donnent une impression d'immense salle, et la flèche qui domine la rue Pierre-Mauroy.",
+      "anecdote": "Sa construction s'est étalée du XIVe au XIXe siècle, mais elle a gardé une remarquable unité de style.",
+      "photo": "La forêt de colonnes de la nef en contre-plongée.",
+      "image": "villes/lille/images/saint-maurice.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_St_maurice.jpg"
+    },
+    {
+      "id": "saint-andre",
+      "nom": "Église Saint-André",
+      "lat": 50.6448,
+      "lng": 3.05394,
+      "categories": [
+        "religieux",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Une grande église baroque du XVIIIe siècle, rue Royale, dans le quartier aristocratique du Vieux-Lille.",
+      "aRegarder": "La façade classique et, à l'intérieur, la chaire et les boiseries.",
+      "anecdote": "Charles de Gaulle y a été baptisé en novembre 1890.",
+      "photo": "La façade dans l'axe de la rue Royale.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/lille/images/saint-andre.jpg",
+      "imageCredit": "This illustration was made by Peter Potrowl. Please credi… · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_-_%C3%89glise_Saint-Andr%C3%A9_-_1.jpg"
+    },
+    {
+      "id": "sainte-catherine",
+      "nom": "Église Sainte-Catherine",
+      "lat": 50.63945,
+      "lng": 3.05701,
+      "categories": [
+        "religieux",
+        "art",
+        "insolite"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Une église gothique discrète du quartier Sainte-Catherine, que peu de visiteurs connaissent.",
+      "aRegarder": "Un grand tableau de Rubens : le Martyre de sainte Catherine.",
+      "anecdote": "Peu de Lillois savent qu'un Rubens est accroché dans cette église de quartier.",
+      "photo": "La tour carrée en brique au-dessus des toits.",
+      "note": "Ouverture limitée, souvent lors des offices ou des journées du patrimoine (à confirmer).",
+      "image": "villes/lille/images/sainte-catherine.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_Eglise_Sainte_catherine.jpg"
+    },
+    {
+      "id": "madeleine",
+      "nom": "Église Sainte-Marie-Madeleine",
+      "lat": 50.64479,
+      "lng": 3.06323,
+      "categories": [
+        "religieux",
+        "architecture",
+        "art"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Une église baroque à coupole, construite à la fin du XVIIe siècle après le rattachement de Lille à la France. Elle sert aujourd'hui de lieu d'exposition.",
+      "aRegarder": "Le grand dôme, rare dans une région d'églises à clocher, et les expositions temporaires.",
+      "anecdote": "Son dôme s'inspire de l'architecture romaine, à une époque où Lille découvrait le goût français.",
+      "photo": "Le dôme depuis la rue du Pont-Neuf.",
+      "note": "Ouverte lors des expositions, à confirmer.",
+      "image": "villes/lille/images/madeleine.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_eglise_marie_madeleine.jpg"
+    },
+    {
+      "id": "porte-paris",
+      "nom": "Porte de Paris",
+      "lat": 50.62962,
+      "lng": 3.06899,
+      "categories": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 2,
+      "description": "Un arc de triomphe à la gloire de Louis XIV, élevé entre 1685 et 1692 à l'emplacement d'une ancienne porte des remparts.",
+      "aRegarder": "Les sculptures : Louis XIV en Hercule, la Victoire et les armes de Lille et de la France.",
+      "anecdote": "C'était l'entrée de la ville sur la route de Paris, d'où son nom ; elle célèbre la conquête de Lille en 1667.",
+      "photo": "L'arc avec le beffroi de l'hôtel de ville qui se dresse juste derrière.",
+      "image": "villes/lille/images/porte-paris.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_porte_de_paris.jpg"
+    },
+    {
+      "id": "porte-gand",
+      "nom": "Porte de Gand",
+      "lat": 50.64383,
+      "lng": 3.06802,
+      "categories": [
+        "histoire",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 2,
+      "description": "L'une des dernières portes des anciens remparts, construite en 1617-1621, quand Lille était encore espagnole. Briques rouges et pierre blanche, au bord des douves.",
+      "aRegarder": "Les deux tours, le pont sur l'ancien fossé et l'intérieur, aujourd'hui occupé par des restaurants.",
+      "anecdote": "Elle date de l'époque où Lille appartenait aux Pays-Bas espagnols, avant sa conquête par Louis XIV.",
+      "photo": "La porte vue depuis le jardin en contrebas des remparts.",
+      "image": "villes/lille/images/porte-gand.jpg",
+      "imageCredit": "JackyM59 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:La_Porte_de_Gand_(Intra-muros)_%C3%A0_Lille.jpg"
+    },
+    {
+      "id": "wazemmes",
+      "nom": "Marché de Wazemmes",
+      "lat": 50.62669,
+      "lng": 3.04928,
+      "categories": [
+        "gastronomie",
+        "shopping"
+      ],
+      "duree": 45,
+      "payant": false,
+      "importance": 2,
+      "description": "Le marché le plus populaire de Lille, autour des halles en brique du quartier de Wazemmes : fruits, légumes, fromages, épices et vêtements.",
+      "aRegarder": "Les étals de fromages du Nord (maroilles, vieux-lille), les épices et l'ambiance du dimanche matin.",
+      "anecdote": "Le dimanche, le marché attire des milliers de personnes et prend des airs de fête de quartier.",
+      "photo": "La halle et sa façade en brique, avec les étals devant.",
+      "note": "Marché mardi, jeudi et dimanche matin ; halles ouvertes presque tous les jours (à confirmer).",
+      "image": "villes/lille/images/wazemmes.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_halles_wazemmes.JPG"
+    },
+    {
+      "id": "saint-sauveur",
+      "nom": "Gare Saint-Sauveur",
+      "lat": 50.62719,
+      "lng": 3.07239,
+      "categories": [
+        "art",
+        "nuit"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "Une ancienne gare de marchandises transformée en lieu culturel : expositions, cinéma, concerts et terrasse.",
+      "aRegarder": "Les grandes halles d'expositions, le restaurant installé dans les anciens quais et les installations du moment.",
+      "anecdote": "Les deux halles ont été reconverties pour Lille 2004, l'année où Lille était capitale européenne de la culture.",
+      "photo": "Les quais et leurs lumières en début de soirée.",
+      "note": "Expositions souvent gratuites, horaires à consulter.",
+      "image": "villes/lille/images/saint-sauveur.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_gare_st_sauveur.JPG"
+    },
+    {
+      "id": "tripostal",
+      "nom": "Le Tripostal",
+      "lat": 50.63666,
+      "lng": 3.0728,
+      "categories": [
+        "art"
+      ],
+      "duree": 50,
+      "payant": true,
+      "importance": 1,
+      "description": "Un ancien centre de tri postal près de la gare, devenu un lieu d'expositions d'art contemporain.",
+      "aRegarder": "Les grands plateaux industriels et leurs installations monumentales.",
+      "anecdote": "Le bâtiment a lui aussi été reconverti pour Lille 2004, capitale européenne de la culture.",
+      "photo": "La façade industrielle en béton près des voies.",
+      "note": "Ouvert pendant les expositions seulement, à consulter.",
+      "image": "villes/lille/images/tripostal.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_Tri_Postal.jpg"
+    },
+    {
+      "id": "euralille",
+      "nom": "Euralille et la tour « botte de ski »",
+      "lat": 50.63881,
+      "lng": 3.07608,
+      "categories": [
+        "architecture",
+        "shopping"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 2,
+      "description": "Le quartier d'affaires construit dans les années 1990 autour de la gare TGV Lille-Europe, sur un plan de l'architecte Rem Koolhaas. Centre commercial, tours et parc.",
+      "aRegarder": "La tour de Lille en forme de botte, la gare Lille-Europe et ses grandes baies vitrées.",
+      "anecdote": "Les Lillois surnomment la tour de Christian de Portzamparc « la botte de ski » à cause de sa silhouette.",
+      "photo": "La tour en botte depuis le pont qui relie les deux gares.",
+      "image": "villes/lille/images/euralille.jpg",
+      "imageCredit": "kallerna · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Tour_de_Lille_2.jpg"
+    },
+    {
+      "id": "rue-bethune",
+      "nom": "Rue de Béthune",
+      "lat": 50.63412,
+      "lng": 3.06361,
+      "categories": [
+        "shopping"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "La grande rue piétonne commerçante du centre, entre la place Rihour et la place de Béthune, avec ses cinémas et ses brasseries.",
+      "aRegarder": "Les vitrines, les façades et l'animation du samedi.",
+      "anecdote": "Le premier week-end de septembre, ces rues accueillent la Braderie de Lille, l'un des plus grands marchés aux puces d'Europe, où l'on mange des moules-frites à toute heure.",
+      "image": "villes/lille/images/rue-bethune.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_rue_de_b%C3%A9thune.JPG"
+    },
+    {
+      "id": "palais-rihour",
+      "nom": "Palais Rihour",
+      "lat": 50.63552,
+      "lng": 3.06198,
+      "categories": [
+        "histoire",
+        "architecture"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Un palais gothique en brique, construit au XVe siècle pour Philippe le Bon, duc de Bourgogne. Il ne reste qu'une partie de l'édifice d'origine.",
+      "aRegarder": "La tourelle d'escalier, les fenêtres gothiques et, sur la place, le monument aux morts.",
+      "anecdote": "À l'époque des ducs de Bourgogne, Lille était l'une de leurs capitales, avec Bruxelles et Dijon.",
+      "photo": "La façade en brique avec la place Rihour en premier plan.",
+      "image": "villes/lille/images/palais-rihour.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_palais_rihour.jpg"
+    },
+    {
+      "id": "maison-coilliot",
+      "nom": "Maison Coilliot",
+      "lat": 50.62698,
+      "lng": 3.06012,
+      "categories": [
+        "architecture",
+        "insolite",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 2,
+      "description": "Une façade Art nouveau étonnante, dessinée vers 1900 par Hector Guimard, le créateur des entrées du métro parisien, pour le céramiste Louis Coilliot.",
+      "aRegarder": "La façade en lave émaillée vert sombre, les courbes des balcons et le lettrage d'origine.",
+      "anecdote": "C'est l'une des rares œuvres de Guimard hors de la région parisienne, et beaucoup de Lillois passent devant sans la remarquer.",
+      "photo": "De face, depuis le trottoir d'en face, toute la façade dans le cadre.",
+      "note": "Maison privée : la façade seulement, depuis la rue.",
+      "image": "villes/lille/images/maison-coilliot.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_maison_coilliot_ass.jpg"
+    },
+    {
+      "id": "hospice-gantois",
+      "nom": "Hospice Gantois",
+      "lat": 50.63121,
+      "lng": 3.06825,
+      "categories": [
+        "histoire",
+        "insolite",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 2,
+      "description": "Un hospice fondé en 1462 qui a accueilli des malades et des personnes âgées jusqu'à la fin du XXe siècle, avant de devenir un hôtel.",
+      "aRegarder": "Les pignons en brique de la rue Pierre-Mauroy (l'ancienne rue de Paris) et, si vous entrez, la cour et la chapelle.",
+      "anecdote": "Il a fonctionné comme hospice pendant plus de cinq siècles, jusqu'en 1995.",
+      "photo": "La façade à pignons, depuis le trottoir d'en face.",
+      "note": "Hôtel : l'intérieur se visite discrètement, en tant que client du bar ou du restaurant.",
+      "image": "villes/lille/images/hospice-gantois.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_hospice_gantois_trois_quarts_N.jpg"
+    },
+    {
+      "id": "jardin-geants",
+      "nom": "Jardin des Géants",
+      "lat": 50.6429,
+      "lng": 3.07483,
+      "categories": [
+        "nature",
+        "insolite"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 1,
+      "description": "Un jardin contemporain, ouvert en 2009, qui rend hommage aux géants des fêtes du Nord : grandes silhouettes végétales, passerelles et bassins.",
+      "aRegarder": "Les grandes têtes de géants en végétaux, les jardins d'eau et les cheminements sur pilotis.",
+      "anecdote": "Les géants de carnaval sont une tradition du Nord et de la Belgique, classée au patrimoine immatériel de l'UNESCO.",
+      "photo": "Les jeux de reflets dans les bassins.",
+      "image": "villes/lille/images/jardin-geants.jpg",
+      "imageCredit": "Arkos Fr · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Le_jardin_des_G%C3%A9ants.JPG"
+    },
+    {
+      "id": "noble-tour",
+      "nom": "Noble Tour",
+      "lat": 50.63088,
+      "lng": 3.07419,
+      "categories": [
+        "histoire",
+        "insolite"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Une tour du XVe siècle, l'un des rares vestiges des remparts médiévaux, devenue un mémorial de la Résistance.",
+      "aRegarder": "La grosse tour ronde en pierre et les plaques du mémorial.",
+      "anecdote": "C'est l'un des derniers témoins de l'enceinte que Lille avait avant Vauban.",
+      "photo": "La tour isolée au milieu de la verdure.",
+      "image": "villes/lille/images/noble-tour.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_noble_tour.jpg"
+    },
+    {
+      "id": "place-oignons",
+      "nom": "Place aux Oignons",
+      "lat": 50.6409,
+      "lng": 3.0615,
+      "categories": [
+        "insolite",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Une minuscule place pavée cachée dans le Vieux-Lille, entourée de façades anciennes. Un coin calme que beaucoup de visiteurs ratent.",
+      "aRegarder": "Les vieilles façades, les pavés et la petite terrasse.",
+      "anecdote": "Son nom viendrait d'un ancien jardin ou marché aux oignons, mais l'origine exacte reste discutée.",
+      "photo": "La place en entier depuis l'angle de la rue.",
+      "image": "villes/lille/images/place-oignons.jpg",
+      "imageCredit": "VVVCFFrance · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_aux_oignons_7.jpg"
+    },
+    {
+      "id": "gare-flandres",
+      "nom": "Gare Lille-Flandres",
+      "lat": 50.63638,
+      "lng": 3.07053,
+      "categories": [
+        "histoire",
+        "insolite",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 2,
+      "description": "La grande gare historique de Lille, sur la place de la Gare, face à la rue Faidherbe.",
+      "aRegarder": "La façade classique, son horloge et le haut fronton.",
+      "anecdote": "Sa façade est celle de l'ancienne gare du Nord de Paris : démontée pierre par pierre, elle a été remontée à Lille dans les années 1860, avec un étage de plus.",
+      "photo": "La façade dans l'axe de la rue Faidherbe.",
+      "image": "villes/lille/images/gare-flandres.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_gare_lille_flandres_facade.jpg"
+    },
+    {
+      "id": "musee-histoire-naturelle",
+      "nom": "Musée d'Histoire naturelle",
+      "lat": 50.62666,
+      "lng": 3.06702,
+      "categories": [
+        "nature",
+        "histoire"
+      ],
+      "duree": 50,
+      "payant": true,
+      "importance": 1,
+      "description": "Un musée à l'ancienne, au charme du XIXe siècle : squelettes, animaux naturalisés, minéraux et collections d'ethnographie. Il plaît beaucoup aux enfants.",
+      "aRegarder": "La grande galerie des vertébrés et ses squelettes, et les vitrines de minéraux.",
+      "anecdote": "Ses collections ont été réunies dès le XIXe siècle par les savants et professeurs lillois.",
+      "photo": "La galerie en enfilade, avec les squelettes suspendus.",
+      "note": "Entrée payante ; horaires et travaux à confirmer.",
+      "image": "villes/lille/images/musee-histoire-naturelle.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_Mus%C3%A9e_histoire_naturelle.jpg"
+    },
+    {
+      "id": "parc-matisse",
+      "nom": "Parc Matisse et île Derborence",
+      "lat": 50.64055,
+      "lng": 3.07252,
+      "categories": [
+        "nature",
+        "insolite",
+        "sport"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 1,
+      "description": "Un grand parc près d'Euralille, dessiné par le paysagiste Gilles Clément, avec une vaste pelouse pour courir ou jouer au ballon.",
+      "aRegarder": "Au centre, l'île Derborence : un plateau boisé perché à plusieurs mètres de hauteur, où personne n'a le droit d'aller.",
+      "anecdote": "L'île Derborence a été pensée comme un morceau de nature laissé totalement sauvage, au cœur de la ville.",
+      "photo": "L'île en surplomb, avec les tours d'Euralille au loin.",
+      "image": "villes/lille/images/parc-matisse.jpg",
+      "imageCredit": "Babsy · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Parc_Matisse,_Lille_(2).JPG"
+    },
+    {
+      "id": "rue-massena",
+      "nom": "Rues Masséna et Solférino",
+      "lat": 50.63284,
+      "lng": 3.055,
+      "categories": [
+        "nuit"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Le quartier de la fête étudiante de Lille : bars, pubs et soirées dans deux rues voisines.",
+      "aRegarder": "Les bars bondés et les terrasses le jeudi soir.",
+      "anecdote": "Lille est l'une des plus grandes villes étudiantes de France, et c'est ici que ça se voit le soir.",
+      "image": "villes/lille/images/rue-massena.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:VdA_30_rue_massena.jpg"
+    },
+    {
+      "id": "rue-gand",
+      "nom": "Rue de Gand",
+      "lat": 50.64512,
+      "lng": 3.06846,
+      "categories": [
+        "gastronomie",
+        "nuit"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 2,
+      "description": "La rue des restaurants du Vieux-Lille, avec ses estaminets aux nappes à carreaux et sa cuisine flamande : carbonade, potjevleesch, welsh.",
+      "aRegarder": "Les enseignes et les devantures de bois des estaminets.",
+      "anecdote": "L'estaminet est un café-restaurant typique de Flandre, où l'on jouait autrefois à des jeux traditionnels comme le billard japonais.",
+      "photo": "Les vitrines éclairées le soir.",
+      "image": "villes/lille/images/rue-gand.jpg",
+      "imageCredit": "Валерий Дед · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:2006_-_panoramio_(96).jpg"
+    },
+    {
+      "id": "la-piscine",
+      "nom": "La Piscine (Roubaix)",
+      "lat": 50.69251,
+      "lng": 3.16795,
+      "categories": [
+        "art",
+        "architecture",
+        "insolite"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 2,
+      "description": "À Roubaix, un musée d'art installé dans une piscine Art déco des années 1930 : sculptures autour du bassin, peintures et textiles.",
+      "aRegarder": "Le grand bassin bordé de statues, les vitraux en soleil levant et les anciennes cabines de douche.",
+      "anecdote": "Le bassin a été conservé en partie : les sculptures se reflètent dans une bande d'eau qui court au milieu de la salle.",
+      "photo": "Le bassin et le vitrail, depuis le bout de la grande nef.",
+      "note": "À Roubaix, à environ 10 km : métro ligne 2, station Gare Jean-Lebas. Entrée payante ; fermé le lundi (à confirmer).",
+      "image": "villes/lille/images/la-piscine.jpg",
+      "imageCredit": "Camster2 · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:La_Piscine_Roubaix.jpg"
+    },
+    {
+      "id": "lam",
+      "nom": "LaM – musée d'art moderne",
+      "lat": 50.63759,
+      "lng": 3.15116,
+      "categories": [
+        "art",
+        "nature"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 2,
+      "description": "À Villeneuve-d'Ascq, un musée d'art moderne, d'art contemporain et d'art brut, entouré d'un parc de sculptures.",
+      "aRegarder": "Les Modigliani, Picasso et Braque, et la grande collection d'art brut.",
+      "anecdote": "Le LaM possède l'une des plus importantes collections d'art brut d'Europe, des œuvres créées hors de toute école.",
+      "photo": "Les sculptures du parc avec le bâtiment en brique derrière.",
+      "note": "À Villeneuve-d'Ascq, à environ 7 km : métro ligne 1 puis bus. Entrée payante ; fermé le lundi (à confirmer).",
+      "image": "villes/lille/images/lam.jpg",
+      "imageCredit": "Jamain · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:LaM,_Villeneuve-d%27Ascq_J1a.jpg"
+    },
+    {
+      "id": "stade-mauroy",
+      "nom": "Stade Pierre-Mauroy",
+      "lat": 50.61271,
+      "lng": 3.12783,
+      "categories": [
+        "sport",
+        "architecture"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Le stade du LOSC, inauguré en 2012, avec un toit rétractable. Il accueille aussi des concerts, des matchs de basket ou de tennis.",
+      "aRegarder": "La toiture qui s'ouvre et se ferme, et l'enceinte vue des tribunes.",
+      "anecdote": "Une moitié de la pelouse peut se soulever et glisser sur l'autre pour transformer le stade en salle de spectacle.",
+      "photo": "Depuis le parvis, la grande enveloppe du stade.",
+      "note": "À Villeneuve-d'Ascq, à environ 6 km : métro ligne 1, station 4 Cantons – Stade Pierre-Mauroy. Visites et matchs payants, à réserver.",
+      "image": "villes/lille/images/stade-mauroy.jpg",
+      "imageCredit": "Liondartois · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_vs_PSG_2019_-_Stade_Pierre_Mauroy.jpg"
+    },
+    {
+      "id": "piscine-marx-dormoy",
+      "nom": "Piscine Marx-Dormoy",
+      "lat": 50.63535,
+      "lng": 3.03539,
+      "categories": [
+        "sport"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Une piscine municipale à l'ouest du centre, près du bois de la Citadelle, pour quelques longueurs après la balade.",
+      "aRegarder": "Le bassin et, en été, les abords verts.",
+      "anecdote": "Après avoir fait le tour de la Citadelle à pied, quelques longueurs sont le meilleur moyen de se reposer les jambes.",
+      "note": "Horaires d'ouverture au public et tarifs à confirmer.",
+      "image": "villes/lille/images/piscine-marx-dormoy.jpg",
+      "imageCredit": "Velvet · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_piscine_max_dormoy.jpg"
+    },
+    {
+      "id": "pause-meert",
+      "type": "pause",
+      "nom": "Méert",
+      "lat": 50.63775,
+      "lng": 3.06192,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "gouter",
+        "cafe"
+      ],
+      "duree": 25,
+      "payant": true,
+      "importance": 1,
+      "description": "La pâtisserie historique de Lille, fondée au XVIIIe siècle, célèbre pour ses gaufres fourrées à la vanille de Madagascar.",
+      "aRegarder": "Le salon de thé aux boiseries et la vitrine de gaufres.",
+      "anecdote": "On raconte que le général de Gaulle se faisait livrer les gaufres de Méert.",
+      "photo": "La façade et ses vitrines d'époque.",
+      "note": "Gaufres à emporter ou salon de thé ; horaires à confirmer.",
+      "image": "villes/lille/images/pause-meert.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_Meert.JPG",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-grand-place",
+      "type": "pause",
+      "nom": "Cafés de la Grand'Place",
+      "lat": 50.63665,
+      "lng": 3.0642,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "cafe"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Une terrasse face à la Vieille Bourse pour un café au cœur de la ville.",
+      "aRegarder": "Le va-et-vient de la Grand'Place.",
+      "anecdote": "Dans le Nord, on dit « une bistouille » pour un café arrosé d'un peu d'alcool.",
+      "photo": "La Déesse depuis la terrasse.",
+      "note": "Choix sur place.",
+      "image": "villes/lille/images/pause-grand-place.jpg",
+      "imageCredit": "Velvet · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lille_gd_place_colonne.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-estaminet",
+      "type": "pause",
+      "nom": "Estaminets du Vieux-Lille",
+      "lat": 50.6444,
+      "lng": 3.0679,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Cuisine flamande dans un estaminet : carbonade flamande, potjevleesch, welsh ou tarte au maroilles.",
+      "aRegarder": "Le décor de bois, les nappes à carreaux et les bières de la région.",
+      "anecdote": "Le welsh, pain trempé dans la bière et recouvert de cheddar fondu, vient du pays de Galles mais est devenu une spécialité du Nord.",
+      "photo": "Un welsh fumant, tout juste sorti du four.",
+      "note": "Choix sur place ; réservation conseillée le week-end.",
+      "image": "villes/lille/images/pause-estaminet.jpg",
+      "imageCredit": "Jiel Beaumadier · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Jielbeaumadier_carbonade_flamande_2010.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-centre",
+      "type": "pause",
+      "nom": "Brasseries du centre",
+      "lat": 50.6348,
+      "lng": 3.062,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner",
+        "cafe"
+      ],
+      "duree": 50,
+      "payant": true,
+      "importance": 1,
+      "description": "Brasseries et bistrots autour de la place Rihour et de la rue de Béthune, pour une moules-frites ou un plat du jour.",
+      "aRegarder": "Les terrasses de la place Rihour.",
+      "anecdote": "Pendant la Braderie, les restaurants rivalisent pour former la plus haute montagne de coquilles de moules devant leur porte.",
+      "photo": "Une casserole de moules et son cornet de frites.",
+      "note": "Choix sur place.",
+      "image": "villes/lille/images/pause-centre.jpg",
+      "imageCredit": "Arnaud 25 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Moules_marini%C3%A8res_01.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-wazemmes",
+      "type": "pause",
+      "nom": "Halles de Wazemmes",
+      "lat": 50.62655,
+      "lng": 3.0495,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner",
+        "cafe"
+      ],
+      "duree": 40,
+      "payant": true,
+      "importance": 1,
+      "description": "Comptoirs et stands des halles : fromages du Nord, frites, cuisines du monde, à manger sur le pouce.",
+      "aRegarder": "Les comptoirs du marché et leur ambiance.",
+      "anecdote": "Le maroilles, fromage à croûte orangée né dans une abbaye du Nord, se goûte aussi en tarte, la flamiche.",
+      "photo": "Les étals de fromages des halles.",
+      "note": "Ouvert surtout le matin, plus animé le dimanche ; horaires à confirmer.",
+      "image": "villes/lille/images/pause-wazemmes.jpg",
+      "imageCredit": "BastienM · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Maroilles_(cheese).jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-saint-sauveur",
+      "type": "pause",
+      "nom": "Terrasse de la gare Saint-Sauveur",
+      "lat": 50.62735,
+      "lng": 3.0727,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "gouter",
+        "cafe"
+      ],
+      "duree": 25,
+      "payant": true,
+      "importance": 1,
+      "description": "Le café-restaurant installé dans l'ancienne gare, avec sa grande terrasse sur les quais.",
+      "aRegarder": "Les anciens quais transformés en terrasse.",
+      "anecdote": "Une bière de la région, ou une chicorée, autre spécialité du Nord.",
+      "photo": "La terrasse et les halles derrière.",
+      "note": "Horaires à confirmer.",
+      "image": "villes/lille/images/pause-saint-sauveur.jpg",
+      "imageCredit": "Jalionas · CC0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Welsh_du_nord.jpg",
+      "imageIllustration": true
+    }
+  ],
+  "parcours": [
+    {
+      "id": "essentiel",
+      "emoji": "⭐",
+      "titre": "L'essentiel de Lille",
+      "duree": "half",
+      "resume": "La Grand'Place, la Vieille Bourse, l'Opéra, le Vieux-Lille et la cathédrale : la ville en une demi-journée.",
+      "interets": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "gare-flandres",
+        "grand-place",
+        "vieille-bourse",
+        "place-theatre",
+        "vieux-lille",
+        "notre-dame-treille",
+        "hospice-comtesse",
+        "palais-rihour"
+      ]
+    },
+    {
+      "id": "vieux-lille",
+      "emoji": "🧱",
+      "titre": "Le Vieux-Lille",
+      "duree": "half",
+      "resume": "Pavés, façades flamandes, la cathédrale, la porte de Gand et la maison natale du général de Gaulle.",
+      "interets": [
+        "histoire",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "vieille-bourse",
+        "vieux-lille",
+        "place-oignons",
+        "notre-dame-treille",
+        "hospice-comtesse",
+        "porte-gand",
+        "maison-de-gaulle",
+        "saint-andre"
+      ]
+    },
+    {
+      "id": "insolite",
+      "emoji": "🔍",
+      "titre": "Lille insolite",
+      "duree": "half",
+      "resume": "Une gare venue de Paris, un Rubens caché, un hospice de 1462, une façade de Guimard et une île interdite.",
+      "interets": [
+        "insolite"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "gare-flandres",
+        "parc-matisse",
+        "hospice-gantois",
+        "noble-tour",
+        "maison-coilliot",
+        "sainte-catherine",
+        "place-oignons"
+      ]
+    },
+    {
+      "id": "nuit",
+      "emoji": "🌙",
+      "titre": "Lille by night",
+      "duree": "2h",
+      "heure": "20:30",
+      "resume": "La Grand'Place illuminée, les rues pavées du Vieux-Lille, puis un verre rue Masséna.",
+      "interets": [
+        "nuit",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "grand-place",
+        "vieux-lille",
+        "rue-gand",
+        "rue-massena"
+      ]
+    },
+    {
+      "id": "art",
+      "emoji": "🎨",
+      "titre": "Art et musées",
+      "duree": "day",
+      "resume": "Palais des Beaux-Arts, Hospice Comtesse, la Madeleine, la gare Saint-Sauveur et le Tripostal.",
+      "interets": [
+        "art",
+        "architecture"
+      ],
+      "pauses": [
+        "cafe",
+        "dejeuner"
+      ],
+      "lieux": [
+        "palais-beaux-arts",
+        "maison-coilliot",
+        "madeleine",
+        "hospice-comtesse",
+        "notre-dame-treille",
+        "tripostal",
+        "saint-sauveur"
+      ]
+    },
+    {
+      "id": "vauban",
+      "emoji": "🌿",
+      "titre": "Citadelle et jardins",
+      "duree": "half",
+      "resume": "La reine des citadelles de Vauban, le bois de Boulogne au fil de la Deûle et le jardin Vauban.",
+      "interets": [
+        "nature",
+        "photo"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "sainte-catherine",
+        "citadelle",
+        "bois-boulogne",
+        "zoo",
+        "jardin-vauban"
+      ]
+    },
+    {
+      "id": "sport",
+      "emoji": "🏃",
+      "titre": "Sport et grands espaces",
+      "duree": "half",
+      "transport": "bus",
+      "resume": "Footing autour de la Citadelle, puis le stade Pierre-Mauroy du LOSC en métro.",
+      "interets": [
+        "sport",
+        "nature"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "bois-boulogne",
+        "citadelle",
+        "parc-matisse",
+        "stade-mauroy"
+      ]
+    },
+    {
+      "id": "enfants",
+      "emoji": "🧒",
+      "titre": "Spécial enfants",
+      "duree": "half",
+      "resume": "Le zoo, Guignol au jardin Vauban, les remparts de la Citadelle et une gaufre chez Méert.",
+      "interets": [
+        "nature",
+        "histoire"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "grand-place",
+        "vieille-bourse",
+        "citadelle",
+        "zoo",
+        "jardin-vauban"
+      ]
+    }
+  ]
+}

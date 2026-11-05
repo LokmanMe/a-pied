@@ -1,6 +1,6 @@
 # À pied
 
-PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. L'app se concentre sur la région Moselle / Luxembourg : **Metz** et **Luxembourg** sont proposées à tous. **Marseille** et **Santa Cruz de Tenerife** sont masquées : 7 appuis rapides sur le bouton 📍 les affichent sur ce téléphone, 7 autres les masquent à nouveau. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
+PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. L'app se concentre sur la région Moselle / Luxembourg : **Metz** et **Luxembourg** sont proposées à tous. **Marseille**, **Santa Cruz de Tenerife** et **Lille** sont masquées : 7 appuis rapides sur le bouton 📍 les affichent sur ce téléphone, 7 autres les masquent à nouveau. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
 
 En ligne : <https://lokmanme.github.io/a-pied/> (dépôt `LokmanMe/a-pied`, anciennement `metz-a-pied`).
 
@@ -14,7 +14,7 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 | `style.css` | Thème commun, couleurs propres à chaque ville (`:root[data-ville="…"]`), mode sombre automatique |
 | `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
 | `villes/villes.json` | Catalogue des villes : nom, centre, accroche, couleurs, libellés locaux |
-| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 43 + 6 ; Luxembourg : 43 + 6 ; Marseille : 47 + 6 ; Santa Cruz : 24 + 5), parcours tout prêts |
+| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 43 + 6 ; Luxembourg : 43 + 6 ; Marseille : 47 + 6 ; Santa Cruz : 24 + 5 ; Lille : 39 + 6), parcours tout prêts |
 | `villes/<ville>/distances.json` | Distances réelles à pied entre tous les points (OSM) |
 | `villes/<ville>/images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 | `manifest.webmanifest` | Métadonnées d'installation |
@@ -174,7 +174,7 @@ La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en 
 
 `duree` vaut `2h`, `half` ou `day`. `heure` est facultative (sinon l'heure de départ du questionnaire). `transport` est facultatif : `"bus"` impose les transports en commun quand un lieu est trop loin à pied (Bowl du Prado, plage de Las Teresitas). `interets` sert aux suggestions « Ajouter un lieu proche ». `pauses` accepte `cafe`, `dejeuner` et `gouter`.
 
-Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020. À Marseille, elle combine métro, tram et bus RTM. À Santa Cruz de Tenerife, elle utilise le tram et les bus (« guaguas ») de Titsa ; le point de départ « gare » y est la gare routière (Intercambiador), d'où part aussi le bus 910 pour la plage de Las Teresitas. Les distances à pied ne tiennent pas compte du relief : la montée à Notre-Dame-de-la-Garde (environ 150 m de dénivelé) prend plus longtemps qu'annoncé.
+Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020. À Marseille, elle combine métro, tram et bus RTM. À Santa Cruz de Tenerife, elle utilise le tram et les bus (« guaguas ») de Titsa ; le point de départ « gare » y est la gare routière (Intercambiador), d'où part aussi le bus 910 pour la plage de Las Teresitas. À Lille, elle utilise le métro, le tram et les bus Ilévia ; La Piscine (Roubaix), le LaM et le stade Pierre-Mauroy (Villeneuve-d'Ascq) ne sont proposés qu'avec cette option. Les distances à pied ne tiennent pas compte du relief : la montée à Notre-Dame-de-la-Garde (environ 150 m de dénivelé) prend plus longtemps qu'annoncé.
 
 ### Ordre des étapes (voyageur de commerce)
 

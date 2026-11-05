@@ -204,6 +204,51 @@
   --c-blue: #1F84C9; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
 }
 
+/* ---------- Lille : rouge et blanc de la fleur de lys, brique flamande, pierre blonde ---------- */
+:root[data-ville="lille"] {
+  --stone: #D9A441;
+  --stone-deep: #8A5F14;
+  --stone-soft: #F6E7C8;
+  --on-stone: #1E1415;
+  --bg: #F8F5F2;
+  --surface-2: #EFE8E3;
+  --text: #1E1415;
+  --muted: #5E5153;
+  --line: #E0D5CF;
+  --ink: #6E2A1F;            /* brique */
+  --c-blue: #C21F32;
+  --c-blue-deep: #911424;
+  --c-red: #C21F32;
+  --c-green: #3E7A4E;
+  --c-violet: #5A4C7E;
+  --c-amber: #D9A441;
+  --chip-on: var(--c-red);
+  --chip-on-border: var(--c-blue-deep);
+  --chip-on-text: #FFFFFF;
+  --badge: var(--c-red);
+  --pin: var(--c-red);
+  --pin-border: #FFFFFF;
+  --pin-current: var(--stone);
+  --route: #C21F32;
+  --route-inner: #FFFFFF;
+  --band: linear-gradient(180deg, #C21F32 0 50%, #FFFFFF 50%);
+  --band-height: 10px;
+  --shadow: 0 6px 20px rgba(30, 20, 21, .12);
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-ville="lille"]:not([data-theme="light"]) {
+    --bg: #171213; --surface: #211A1B; --surface-2: #2B2223; --text: #F3ECEA; --muted: #B3A5A6;
+    --line: #3D3132; --stone-soft: #3A2E17; --accent: #F07A85; --ok: #5CBF7F; --c-red: #E5485A;
+    --c-blue: #E5485A; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-ville="lille"][data-theme="dark"] {
+  --bg: #171213; --surface: #211A1B; --surface-2: #2B2223; --text: #F3ECEA; --muted: #B3A5A6;
+  --line: #3D3132; --stone-soft: #3A2E17; --accent: #F07A85; --ok: #5CBF7F; --c-red: #E5485A;
+  --c-blue: #E5485A; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -262,6 +307,17 @@ button, input, select { font: inherit; color: inherit; }
   height: 26px; border-radius: 3px 3px 11px 11px;
   background: linear-gradient(90deg, #FFFFFF 0 33.3%, #0768A9 33.3% 66.6%, #F2C230 66.6%);
   border-color: var(--ink);
+}
+:root[data-ville="lille"] .brand-mark {
+  /* de gueules à la fleur de lys d'argent */
+  height: 26px; border-radius: 3px 3px 11px 11px;
+  background:
+    radial-gradient(ellipse 22% 38% at 50% 40%, #FFFFFF 92%, transparent 100%),
+    radial-gradient(ellipse 18% 14% at 28% 58%, #FFFFFF 90%, transparent 100%),
+    radial-gradient(ellipse 18% 14% at 72% 58%, #FFFFFF 90%, transparent 100%),
+    linear-gradient(#FFFFFF, #FFFFFF) 50% 72% / 60% 10% no-repeat,
+    #C21F32;
+  border-color: #911424;
 }
 :root:not([data-ville]) .brand-mark { background: var(--stone); }
 .topbar-actions { display: flex; gap: 8px; flex: none; }

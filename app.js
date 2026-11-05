@@ -972,7 +972,7 @@ function onCityButton() {
   const all = !load(SHOW_ALL_KEY, false);
   save(SHOW_ALL_KEY, all);
   showCities();
-  const names = CITIES.filter((c) => c.cache).map((c) => c.nom).join(' et ');
+  const names = CITIES.filter((c) => c.cache).map((c) => c.nom).join(', ').replace(/, ([^,]*)$/, ' et $1');
   toast(all ? `🔓 ${names} : villes affichées.` : `🔒 ${names} : villes de nouveau masquées.`);
 }
 

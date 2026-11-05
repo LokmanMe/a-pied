@@ -128,6 +128,41 @@
       },
       "trajetBus": "🚋 tram/guagua",
       "cache": true
+    },
+    {
+      "id": "lille",
+      "nom": "Lille",
+      "pays": "France",
+      "dossier": "villes/lille",
+      "centre": {
+        "lat": 50.6372,
+        "lng": 3.0633
+      },
+      "image": "villes/lille/images/grand-place.jpg",
+      "resume": "Grand'Place, Vieille Bourse, Vieux-Lille et citadelle de Vauban",
+      "accroche": "Quelques questions, et je vous trace un parcours dans la capitale des Flandres, entre briques rouges et façades flamandes.",
+      "couleur": {
+        "clair": "#C21F32",
+        "sombre": "#171213"
+      },
+      "libelles": {
+        "interests": {
+          "nature": "🌿 Nature & Citadelle",
+          "gastronomie": "🧇 Saveurs du Nord"
+        },
+        "transport": {
+          "bus": "🚶+🚇 Pied + métro/tram Ilévia"
+        },
+        "start": {
+          "gare": "🚉 Gare Lille-Flandres"
+        },
+        "pauses": {
+          "dejeuner": "🍽 Déjeuner (welsh, carbonade…)",
+          "gouter": "🧇 Goûter gaufre"
+        }
+      },
+      "trajetBus": "🚇 métro/bus Ilévia",
+      "cache": true
     }
   ]
 }
