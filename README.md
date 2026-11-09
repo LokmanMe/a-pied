@@ -1,191 +1,121 @@
 # À pied
 
-PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. L'app se concentre sur la région Moselle / Luxembourg : **Metz** et **Luxembourg** sont proposées à tous. **Marseille**, **Santa Cruz de Tenerife** et **Lille** sont masquées : 7 appuis rapides sur le bouton 📍 les affichent sur ce téléphone, 7 autres les masquent à nouveau. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
+**Votre parcours de visite sur mesure, à pied, dans la ville.**
 
-En ligne : <https://lokmanme.github.io/a-pied/> (dépôt `LokmanMe/a-pied`, anciennement `metz-a-pied`).
+Répondez à quelques questions (ce qui vous intéresse, le temps dont vous disposez, votre rythme) et À pied vous trace un itinéraire : les lieux à voir, dans le meilleur ordre, avec les horaires, les pauses et une fiche pour chaque étape. L'app fonctionne même sans connexion pendant la visite.
 
-HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + tuiles OpenStreetMap.
+👉 **Ouvrir l'app : <https://lokmanme.github.io/a-pied/>**
 
-## Contenu
+Villes disponibles : **Metz** et **Luxembourg**.
 
-| Fichier | Rôle |
+L'app est gratuite, sans compte, sans publicité. Vos préférences et votre progression restent sur votre téléphone.
+
+---
+
+## Installer l'app
+
+À pied s'installe directement depuis le navigateur, sans passer par un store. Une fois installée, elle a son icône sur l'écran d'accueil et s'ouvre en plein écran comme une application classique.
+
+### Sur Android
+
+1. Ouvrez <https://lokmanme.github.io/a-pied/> dans **Chrome**.
+2. Touchez le menu **⋮** en haut à droite, puis **Ajouter à l'écran d'accueil** (ou **Installer l'application**).
+3. Confirmez : l'icône À pied apparaît sur votre écran d'accueil.
+
+### Sur iPhone
+
+1. Ouvrez <https://lokmanme.github.io/a-pied/> dans **Safari**.
+2. Touchez le bouton **Partager** (le carré avec une flèche vers le haut).
+3. Choisissez **Sur l'écran d'accueil**, puis **Ajouter**.
+
+### Sur ordinateur
+
+Ouvrez simplement <https://lokmanme.github.io/a-pied/> dans votre navigateur : l'app fonctionne aussi sur PC et Mac, pratique pour préparer sa visite sur grand écran. Avec Chrome ou Edge, vous pouvez aussi l'installer : icône **Installer** à droite de la barre d'adresse.
+
+### Autoriser la localisation
+
+Au premier lancement, l'app vous demande l'accès à votre position, pour afficher le point bleu sur la carte et partir de là où vous êtes. Ce n'est pas obligatoire : sans localisation, tout fonctionne, sauf le point bleu.
+
+Si vous avez refusé par erreur :
+- **Android** : Paramètres → Applications → À pied → Autorisations → Position.
+- **iPhone** : Réglages → Confidentialité et sécurité → Service de localisation.
+
+---
+
+## Comment ça marche
+
+### 1. Choisissez une ville
+
+Au premier lancement, choisissez votre ville. L'app s'en souvient ; le bouton 📍 en haut de l'écran permet d'en changer à tout moment.
+
+### 2. Prenez un parcours tout prêt…
+
+En haut de l'écran, des **parcours thématiques** sont prêts à l'emploi : l'essentiel de la ville, le quartier historique, la ville by night, art et musées, nature, lieux insolites, sport, spécial enfants… Un seul appui, et c'est parti. La durée estimée est indiquée sur chaque carte.
+
+### 3. … ou composez le vôtre
+
+Répondez à quelques questions :
+
+| Question | Choix |
 |---|---|
-| `index.html` | Choix de la ville, questionnaire et écran de parcours |
-| `style.css` | Thème commun, couleurs propres à chaque ville (`:root[data-ville="…"]`), mode sombre automatique |
-| `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
-| `villes/villes.json` | Catalogue des villes : nom, centre, accroche, couleurs, libellés locaux |
-| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 43 + 6 ; Luxembourg : 43 + 6 ; Marseille : 47 + 6 ; Santa Cruz : 24 + 5 ; Lille : 39 + 6), parcours tout prêts |
-| `villes/<ville>/distances.json` | Distances réelles à pied entre tous les points (OSM) |
-| `villes/<ville>/images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
-| `manifest.webmanifest` | Métadonnées d'installation |
-| `service-worker.js` | Cache de l'app, des données de toutes les villes, de Leaflet et des tuiles déjà vues |
-| `icons/` | Icônes 192, 512 et maskable 512 |
+| **Ce qui vous intéresse** | Histoire, architecture, art et musées, églises, nature, gastronomie, shopping, photo et points de vue, vie nocturne, insolite et secret, sport et plein air |
+| **Temps disponible** | 2 h, ½ journée, journée, 2 jours |
+| **Rythme** | Tranquille, normal ou soutenu |
+| **Déplacement** | Tout à pied, ou à pied + bus/tram pour les lieux plus éloignés |
+| **Point de départ** | La gare, un parking ou votre position actuelle |
+| **Budget** | Gratuit uniquement, ou entrées payantes acceptées |
+| **Pauses** | Café, déjeuner, goûter : l'app vous propose une bonne adresse au bon moment |
 
-Au premier lancement, l'app demande la ville ; elle s'en souvient ensuite (bouton 📍 en haut pour changer). Un lien `…/?ville=luxembourg` ouvre directement une ville. Les préférences, le parcours en cours et les lieux visités sont stockés dans le `localStorage` du téléphone, séparément pour chaque ville (les données des anciennes apps « Metz à pied » et « Luxembourg à pied » sont reprises automatiquement).
+Touchez **Tracer mon parcours** : les lieux sont choisis selon vos goûts et mis dans l'ordre qui vous fait marcher le moins possible.
 
-## Lancer en local
+### 4. Suivez le guide
 
-Depuis le dossier du projet :
+L'écran du parcours affiche :
+- **La carte** avec toutes les étapes numérotées et le tracé à suivre dans les rues.
+- **Un résumé** : nombre d'étapes, distance à pied, durée totale et pourcentage déjà visité.
+- **La liste des étapes**, avec l'heure d'arrivée prévue, le temps à passer sur place et le temps de marche entre deux lieux.
 
-```bash
-python -m http.server 8000
-```
+En bas de l'écran :
+- **◎** recentre la carte sur votre position.
+- **Itinéraire ↗** ouvre le trajet jusqu'à la prochaine étape dans votre application de cartes (Google Maps, Plans…).
+- **Étape suivante →** marque l'étape en cours comme visitée et passe à la suivante.
 
-Puis ouvrir <http://localhost:8000>. `localhost` compte comme contexte sécurisé : le service worker et la géolocalisation y fonctionnent.
+### Les fiches des lieux
 
-> Ne pas ouvrir `index.html` en double-cliquant (`file://`) : le chargement des données et le service worker ne fonctionnent pas dans ce mode.
+Touchez une étape pour ouvrir sa fiche : une photo, une description, **ce qu'il faut regarder**, une **anecdote**, un **conseil photo** et les infos pratiques (gratuit ou payant, horaires à vérifier). Faites glisser la fiche vers le bas pour la fermer.
 
-## Déployer sur GitHub Pages
+### Adapter son parcours
 
-Une PWA doit être servie en HTTPS pour être installable ; GitHub Pages le fait gratuitement. Tous les chemins sont relatifs et le service worker a pour portée `./`, l'app fonctionne donc sous `https://<utilisateur>.github.io/<dépôt>/`, quel que soit le nom du dépôt.
+- **✕** sur une étape la retire du parcours.
+- **＋ Ajouter un lieu proche** propose des lieux intéressants à deux pas de votre itinéraire.
+- **↻ Régénérer** propose un autre parcours avec les mêmes réponses.
+- **✓** sur une étape visitée annule le « visité » si vous l'avez marquée par erreur.
+- **⚙︎** en haut de l'écran revient au questionnaire pour changer vos préférences.
 
-### Avec GitHub CLI (`gh`)
+Votre parcours et les lieux déjà visités sont gardés en mémoire : vous pouvez fermer l'app et reprendre plus tard là où vous en étiez.
 
-```bash
-gh auth login
-```
+---
 
-```bash
-gh repo create a-pied --public --source=. --remote=origin --push
-```
+## Utiliser l'app hors connexion
 
-```bash
-gh api -X POST repos/{owner}/a-pied/pages -f "source[branch]=main" -f "source[path]=/"
-```
+Une fois l'app ouverte une première fois, tous les lieux, fiches et photos sont enregistrés sur votre téléphone : la visite fonctionne même sans réseau.
 
-### Sans `gh`
+Pour la carte, un conseil : **avant de partir** (au Wi-Fi de l'hôtel par exemple), tracez votre parcours et faites défiler la carte sur les quartiers à visiter. Les zones affichées restent ensuite disponibles hors connexion. Sans réseau, le tracé entre les étapes est dessiné en ligne droite.
 
-1. Créer un dépôt public vide sur <https://github.com/new> (sans README).
-2. Pousser le code :
+## Mises à jour
 
-```bash
-git remote add origin https://github.com/<utilisateur>/<dépôt>.git
-```
+L'app se met à jour toute seule : une nouvelle version est téléchargée en arrière-plan et s'affiche au lancement suivant.
 
-```bash
-git push -u origin main
-```
+---
 
-3. Sur GitHub : **Settings → Pages → Build and deployment → Source : Deploy from a branch**, branche `main`, dossier `/ (root)`, **Save**.
-4. Après 1 à 2 minutes, l'app est en ligne sur `https://<utilisateur>.github.io/<dépôt>/`.
+## Bon à savoir
 
-### Renommer le dépôt
+- **Horaires, tarifs et ouvertures sont indicatifs** : pensez à les vérifier sur place ou sur le site du lieu avant de vous déplacer.
+- Les temps de marche ne tiennent pas compte des montées : prévoyez un peu plus dans les rues en pente.
+- Les photos des adresses de pause illustrent le plat ou le quartier, pas l'établissement lui-même.
 
-**Settings → General → Repository name**. L'adresse du site change avec le nom (l'ancienne adresse GitHub Pages ne redirige pas) : il faudra réinstaller l'app sur les téléphones. Les préférences, parcours et lieux visités sont conservés, car ils sont liés au domaine `<utilisateur>.github.io` et non au nom du dépôt. Mettre aussi à jour le remote local :
+## Crédits
 
-```bash
-git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
-```
-
-### Mettre à jour l'app
-
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v12`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
-
-## Installer sur Android
-
-1. Ouvrir l'URL GitHub Pages dans **Chrome**.
-2. Menu **⋮** → **Ajouter à l'écran d'accueil** (ou **Installer l'application**), puis confirmer.
-3. Lancer l'app depuis son icône : elle s'ouvre en plein écran, sans barre d'adresse.
-
-Conseils pour la visite :
-- Avant de partir (au Wi-Fi de l'hôtel par exemple), générez votre parcours et faites défiler/zoomer la carte sur les zones du parcours : les tuiles consultées restent disponibles hors ligne (jusqu'à environ 1 500 tuiles).
-- Autorisez la localisation quand Chrome la demande, pour voir le point bleu. En cas de refus, l'app reste utilisable ; pour réactiver : cadenas à gauche de l'adresse → Autorisations → Position (ou, pour l'app installée, Paramètres Android → Applications → À pied → Autorisations).
-
-## Installer sur iPhone
-
-1. Ouvrir l'URL GitHub Pages dans **Safari**.
-2. Bouton **Partager** (carré avec une flèche vers le haut), puis **Sur l'écran d'accueil**, puis **Ajouter**.
-3. Lancer l'app depuis son icône : elle s'ouvre en plein écran, sans la barre de Safari.
-
-Depuis iOS 16.4, l'ajout fonctionne aussi depuis Chrome sur iPhone (même bouton Partager). Autoriser la localisation au premier lancement ; sinon : Réglages → Confidentialité et sécurité → Service de localisation.
-
-## Optionnel : générer un .apk avec PWABuilder
-
-1. Ouvrir <https://www.pwabuilder.com> et coller l'URL GitHub Pages de l'app.
-2. Laisser l'analyse se terminer (le manifest, le service worker et les icônes sont déjà conformes).
-3. **Package for stores → Android → Generate Package**. Le zip contient un `.apk` signé de test et un `.aab` pour le Play Store.
-4. Copier l'`.apk` sur le téléphone et l'installer (autoriser l'installation depuis des sources inconnues pour l'application qui l'ouvre).
-
-Pour supprimer la barre d'adresse dans l'APK, publier aussi le fichier `assetlinks.json` fourni par PWABuilder dans `.well-known/` à la racine du domaine (voir la doc PWABuilder ; sur un sous-dossier GitHub Pages, cela nécessite un domaine personnalisé ou un dépôt `<utilisateur>.github.io`).
-
-## Ajouter une ville
-
-1. Créer `villes/<id>/lieux.json` avec la même structure que Metz : `departs` (`gare` et `parkings`, chacun avec `id`, `nom`, `lat`, `lng`) et `lieux` (voir [Données](#données)).
-2. Ajouter les photos dans `villes/<id>/images/` (champ `image` : `villes/<id>/images/<lieu>.jpg`).
-3. Calculer `villes/<id>/distances.json` (voir plus bas).
-4. Déclarer la ville dans `villes/villes.json` :
-
-```json
-{
-  "id": "nancy", "nom": "Nancy", "pays": "France", "dossier": "villes/nancy",
-  "centre": { "lat": 48.6937, "lng": 6.1834 },
-  "image": "villes/nancy/images/place-stanislas.jpg",
-  "resume": "Ce qu'on voit sur la carte de choix de ville",
-  "accroche": "Phrase d'introduction du questionnaire.",
-  "couleur": { "clair": "#C9A043", "sombre": "#17130C" },
-  "libelles": {
-    "interests": { "gastronomie": "🥧 Gastronomie lorraine" },
-    "transport": { "bus": "🚶+🚋 Pied + tram" },
-    "pauses": { "gouter": "🟡 Goûter macarons" }
-  },
-  "trajetBus": "🚋 tram",
-  "cache": false
-}
-```
-
-`"cache": true` masque la ville du choix de ville (et des liens `?ville=`) tant qu'elle n'a pas été débloquée par 7 appuis rapides sur 📍 ; ses données restent mises en cache pour fonctionner hors ligne une fois débloquée.
-
-5. Facultatif : un thème de couleurs dans `style.css` avec `:root[data-ville="<id>"] { --stone: …; --c-blue: …; --route: …; … }` (sinon la ville prend le thème de Metz).
-6. Incrémenter `VERSION` dans `service-worker.js`. Toutes les villes du catalogue sont précachées à l'installation (environ 3 Mo par ville) ; au-delà d'une dizaine de villes, il vaudrait mieux ne mettre en cache que la ville choisie.
-
-## Données
-
-Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/2026. **Les horaires, tarifs et adresses de pause sont indicatifs : à confirmer sur place.** Champs d'un lieu dans `lieux.json` :
-
-```json
-{
-  "id": "identifiant-unique",
-  "nom": "Nom affiché",
-  "lat": 49.12, "lng": 6.17,
-  "categories": ["histoire", "architecture", "art", "religieux", "nature", "gastronomie", "shopping", "photo", "nuit", "insolite", "sport"],
-  "duree": 20, "payant": false, "importance": 1,
-  "description": "…", "aRegarder": "…", "anecdote": "…", "photo": "…",
-  "note": "facultatif"
-}
-```
-
-Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables. Un parcours ne propose que les lieux qui correspondent aux centres d'intérêt choisis, et, en mode « À pied », à moins de 4,5 km du départ (Bowl du Prado, plage de Las Teresitas… demandent l'option transports) ; les adresses de pause en font partie (gastronomie, vie nocturne), avec au plus 30 min sur place.
-
-### Parcours tout prêts
-
-La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en haut du questionnaire (7 ou 8 par ville). L'ordre de visite est recalculé depuis le point de départ du visiteur ; son rythme et son mode de déplacement s'appliquent, et la durée affichée sur la carte est calculée.
-
-```json
-{
-  "id": "nuit", "emoji": "🌙", "titre": "Metz by night",
-  "resume": "Phrase affichée sur la carte",
-  "duree": "2h",
-  "heure": "20:30",
-  "interets": ["nuit", "photo"],
-  "pauses": [],
-  "lieux": ["place-armes", "opera-comedie", "temple-neuf"]
-}
-```
-
-`duree` vaut `2h`, `half` ou `day`. `heure` est facultative (sinon l'heure de départ du questionnaire). `transport` est facultatif : `"bus"` impose les transports en commun quand un lieu est trop loin à pied (Bowl du Prado, plage de Las Teresitas). `interets` sert aux suggestions « Ajouter un lieu proche ». `pauses` accepte `cafe`, `dejeuner` et `gouter`.
-
-Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020. À Marseille, elle combine métro, tram et bus RTM. À Santa Cruz de Tenerife, elle utilise le tram et les bus (« guaguas ») de Titsa ; le point de départ « gare » y est la gare routière (Intercambiador), d'où part aussi le bus 910 pour la plage de Las Teresitas. À Lille, elle utilise le métro, le tram et les bus Ilévia ; La Piscine (Roubaix), le LaM et le stade Pierre-Mauroy (Villeneuve-d'Ascq) ne sont proposés qu'avec cette option. Les distances à pied ne tiennent pas compte du relief : la montée à Notre-Dame-de-la-Garde (environ 150 m de dénivelé) prend plus longtemps qu'annoncé.
-
-### Ordre des étapes (voyageur de commerce)
-
-- **Distances réelles à pied** : `villes/<ville>/distances.json` contient la matrice des distances piétonnes entre tous les lieux, la gare et les parkings, calculée sur les rues OpenStreetMap (OSRM, profil piéton). Pour un départ GPS, la première étape utilise le vol d'oiseau × 1,3.
-- **Ordre optimal** : l'ordre de visite minimise la distance totale à pied, sans retour au point de départ. Jusqu'à 15 étapes par jour, il est exact (programmation dynamique de Held-Karp) ; au-delà, l'app enchaîne plusieurs départs « plus proche voisin » améliorés par 2-opt et Or-opt.
-- **Tracé sur la carte** : en ligne, le parcours suit les rues (service de routage piéton routing.openstreetmap.de, qui reçoit les coordonnées des étapes et du point de départ, y compris la position GPS si vous l'avez choisie) ; hors ligne, il est dessiné en lignes droites.
-
-Pour recalculer une matrice après avoir ajouté un lieu, interroger `https://routing.openstreetmap.de/routed-foot/table/v1/driving/<lng,lat;…>?annotations=distance` avec les points dans l'ordre de `ids` (gare, parkings, puis lieux).
-
-### Photos
-
-Chaque lieu a une photo libre de droits issue de Wikimedia Commons (800 px max), avec l'auteur et la licence affichés sous la photo dans la fiche (champs `image`, `imageCredit`, `imageUrl` de `lieux.json`). Les photos des pauses sont des illustrations (plat, quartier), pas l'établissement lui-même. Elles sont mises en cache à l'installation pour rester visibles hors ligne.
-
-Données cartographiques © contributeurs OpenStreetMap.
+- Cartes et données géographiques : © contributeurs [OpenStreetMap](https://www.openstreetmap.org/copyright).
+- Calcul des trajets à pied : [routing.openstreetmap.de](https://routing.openstreetmap.de).
+- Photos : [Wikimedia Commons](https://commons.wikimedia.org), sous licences libres ; l'auteur et la licence sont indiqués sous chaque photo dans l'app.
